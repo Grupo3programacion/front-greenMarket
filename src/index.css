@@ -1,13 +1,677 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App {
+  max-width: 1550px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px #08a05ca4;
+  padding: 0 15 px;
+  box-sizing: border-box;
+}
+
+/*------------------HEADER.-------*/
+
+/* header {
+  width: 97%;
+  min-height: 100px;
+  max-width: 1550px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex  -wrap: wrap;
+  position: fixed;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0 5px 10px #084fa050;
+} */
+
+header {
+  background-color: #ffffff; /* Cambia el color de fondo según preferencias */
+  padding: 10px 20px; /* Ajusta los márgenes internos  */
+  border-bottom: none; /* Elimina el borde inferior */
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px #084fa050;/* Agrega una sombra al borde inferior */
+  margin-bottom: 20px; /* Agrega un margen inferior para separar el encabezado */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header ul li {
+  margin-right: 20px; /* Ajusta el espaciado entre los elementos de la lista */
+}
+
+header ul li a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header ul li a:hover {
+  color: #08a05c;
+}
+
+
+
+a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: #08a05c;
+}
+
+li {
+  list-style: none;
+}
+
+header ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+header ul li {
+  padding: 0 1rem;
+}
+
+header ul li a {
+  font-weight: bold;
+}
+
+header .cart {
+  position: relative;
+  cursor: pointer;
+}
+
+header .cart box-icon {
+  width: 45px;
+  height: 45px;
+}
+
+header .cart span {
+  position: absolute;
+  top: -1.5rem;
+  right: -1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: crimson;
+}
+/*-------------INICIO------*/
+
+.inicio {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 9rem;
+}
+
+.inicio h1 {
+  font-size: 2rem;
+  color: #08a05c;
+}
+
+.inicio img {
+  width: 100%;
+}
+
+/*-------------PRODUCTOS------*/
+.title {
+  font-size: 2rem;
+  padding: 10rem 0 0 0;
+  color: #08a05c;
+}
+.productos {
+  padding: 5rem 1rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 3rem 2rem;
+  box-sizing: border-box;
+}
+.producto {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 10px 10px 2px rgba(0, 0, 0, 0.2);
+  border: 6px solid transparent;
+  border-radius: 5px;
+}
+.producto:hover {
+  border: 6px solid #08a05c55;
+}
+.producto__img img {
+  width: 310px;
+}
+.producto__footer {
+  padding: 1rem;
+}
+.producto__footer h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #1a202c;
+  font-family: Helvetica, sans-serif;
+}
+.producto__footer p {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.555);
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.producto__footer .price {
+  font-size: 2rem;
+  color: #1a202c;
+}
+
+.producto .buttom {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center; 
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem 2rem;
+  padding: 0 1rem;
+  margin: 1rem;
+  
+  
+}
+.buttom .btn {
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  
+}
+
+.buttom button {
+  background-color: #3033d3;
+  max-width: 250px;
+  width: 100%;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 600;
+  
+}
+/* .buttom div {
+  background-color: #08a05c;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  margin-left: -2rem;
+  border-radius: 2px;
+} 
+.buttom div a {
+  color: white;
+  font-weight: 700;
+}
+.buttom div a:hover {
+  color: white;
+} */
+
+/*-------------CARRITO------*/
+
+.carritos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  padding-bottom: 5rem;
+  /*visibility:hidden; */
+}
+
+.carrito {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 60%;
+  height: 80%;
+  border-radius: 8px;
+  overflow-x: scroll;
+  transition: all 300ms ease-in-out;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.carrito h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.carrito.show {
+  visibility: visible;
+}
+.carrito.show {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.carrito__close box-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transform: all 300ms ease-in-out;
+  margin: 3rem 0 0 2rem;
+}
+
+.carrito__close box-icon:hover {
+  fill: crimson;
+}
+
+.carrito__center {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.carrito__item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  width: 80%;
+  margin: 2rem auto;
+  box-shadow: 0 1px 10px #08a05c;
+  border-radius: 5px;
+}
+
+.carrito__center img {
+  width: 9rem;
+}
+
+.carrito__item h3 {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.carrito__item .price {
+  color: #1a202c;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: start;
+  margin-left: -1rem;
+}
+
+.carrito__item box-icon {
+  fill: #08a05c;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 0.3rem;
+}
+
+.carrito__item .cantidad {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.carrito__item .remove__item box-icon {
+  width: 60px;
+  height: 80px;
+  fill: crimson;
+  margin-top: 2rem;
+}
+
+.carrito__footer {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.carrito__footer h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.carrito__footer .btn {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  background-color: #08a05c;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.carrito__footer .btn {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  font-size: 1.2rem;
+  background-color: #08a05c;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.carrito__footer .btn:hover {
+  background-color: #0f5c39;
+  color: white;
+}
+
+.carrito__close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carrito__title {
+  margin: 0;
+  text-align: center;
+}
+
+
+
+.input-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: 30%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+/*-------------BOTON LOGIN------*/
+
+.login-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/*-------------LOGIN------*/
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  width: 300px;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+.input-container label {
+  margin-left: 10px;
+}
+
+.input-container input {
+  margin-left: 30px;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*-------------MEDIA------*/
+@media only screen and (max-width: 1000px) {
+  .carrito__item {
+    width: 92%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .carrito {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+  .carrito__item h3 {
+    font-size: 1.2rem;
+  }
+}
+
+
+/*-------------CRUD------*/
+
+ .crudProductos {
+  text-align: center;
+} 
+
+.crudProductos logo {
+  height: 40vmin;
+  pointer-events: none;
+} 
+
+.crudProductos .buttom {
+  width: 100%;
+  height: 45px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem 3rem;
+  padding: 0 1rem;
+  margin: 1rem;
+}
+
+
+
+.crudProductos header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} 
+
+.crudProductos-link {
+  color: #61dafb;
+} 
+
+
+.crudProductos .insertarProducto {
+  width: 100%;
+  height: 45px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem 3rem;
+  padding: 0 1rem;
+  margin: 1rem;
+}
+.insertarProducto .btn {
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.insertarProducto button {
+  background-color: #3033d3;
+  max-width: 250px;
+  width: 100%;
+
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 600;
+}
+
+/*---LOGIN---*/
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#formContent {
+  background-color: #f6f6f6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+  color: red;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-outline-danger {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+
+/*---------------- Estilos para el modal LOGIN---------------*/
+.modal {
+  display: none; /* Por defecto, el modal está oculto */
+  position: fixed; /* Se posiciona en relación al viewport */
+  z-index: 1; /* Asegura que el modal esté por encima de otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Permite hacer scroll si el contenido del modal es más grande que la ventana */
+  background-color: rgba(0,0,0,0.4); /* Fondo oscuro semitransparente */
+}
+
+/* Estilos para el contenido del modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Centra el modal verticalmente */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Ancho del contenido del modal */
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  header ul {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .carrito__item h3 {
+    display: 0.5rem;
+  }
+  .carrito__item .remove__item {
+    width: 30px;
+    height: 60px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .crudProductos-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
